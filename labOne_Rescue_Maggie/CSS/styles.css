@@ -5,14 +5,15 @@ File Name: styles.css
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, img, h1{
+body, header, nav, main, footer, img, h1, ul{
   margin: 0;
   padding: 0;
   border: 0; 
 }
+
 /* Style rules for body */
-body{
-  background-color: #000;
+body {
+  background-color: #f6eee4;
 }
 
 /* Style rules for images */
@@ -21,28 +22,42 @@ img {
   display: block;
 }
 
-/* Style rules for header content */
-header {
-  text-align: center;
-  font-size: 3em;
-  color: #373684;
+/* Style rules for mobile viewport */
+
+/* Style rules to show mobile class and hide tablet-desktop class */
+.mobile {
+  display: block;
 }
-header h1 {
-  font-style: italic;
+.tab-desk {
+  display: none;
+}
+
+/* Style rules for header area */
+.mobile h1, .mobile h3 {
+  padding: 2%;
+  text-align: center;
+}
+.mobile h1 {
+  font-family: 'Emblema One', cursive;
+}
+.mobile h3 {
+  font-family: 'Lora', serif;
 }
 
 /* Style rules for navigation area */
 nav {
-  background-color: #373684;
+  background-color: #2a1f14;
 }
 nav ul{
   list-style-type: none;
-  margin: 0;
   text-align: center;
 }
 nav li {
-  display: inline-block;
-  font-size: 2em;
+  display: block;
+  font-size: 1.5em;
+  font-family: Geneva, Arial,  sans-serif;
+  font-weight: bold;
+  border-top: 0.5px solid #f6eee4;
 }
 nav li a {
   display: block;
@@ -55,46 +70,47 @@ nav li a {
 /* Style rules for the main content*/ 
 main {
   padding: 2%;
-  background-color: #e5e9fc;
-  overflow: auto;
-  font-family: Verdana, Arial, sans-serif;
+  font-family: 'Lora', serif;
 }
 main p{
-  font-size: 1.25em;
+  font-size: 1.24em;
 }
-.action{
-  font-size: 1.75em;
-  color: #373684;
-  font-weight: bold;
+main h3 {
+  padding-top: 2%;
 }
-#piano, #guitar, #violin {
-  width: 29%;
-  float: left;
-  margin: 0 2%;
-}
-.info {
-  clear: left;
-  background-color: #c0caf7;
-  padding: 1% 2%;
-}
-#contact {
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-}
-#contact a{
-  color: #4645a8;
-  text-decoration: none;
-  font-weight: bold;
-}
-.map {
-  border: 5px solid #373684;
+main ul {
+  list-style-type: square;
 }
 .link {
   color: #4d3319;
   text-decoration: none;
   font-weight: bold;
   font-style: italic;
+}
+.action{
+  font-size: 1.75em;
+  color: #373684;
+  text-align: center;
+}
+.round {
+  border-radius: 6px;
+}
+#info {
+  margin-left: 10%;
+}
+#contact {
+  text-align: center;
+}
+.tel-link {
+  background-color: #2a1f14;
+  padding: 2%;
+  width: 80%;
+  margin: 0 auto;
+}
+.tel-link a {
+  color: #f6eee4;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* Style rules for footer content */
@@ -103,4 +119,76 @@ footer {
   font-size: 0.65em;
   clear: left;
 }
+footer a {
+  color: #4645a8;
+  text-decoration: none;
+}
 
+/* Media Query for Tablet Viewport*/
+@media screen and (min-width: 620px), print {
+  
+  /* Tablet Viewport: SHow tab-desk class, hide mobile class */
+  .tab-desk {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+  nav li {
+    border-top: none;
+    display: inline-block;
+    font-size: 1.25 em;
+  }
+  nav li a {
+    padding: 0.5em;
+  }
+
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1000px), print {
+
+  /* Desktop Viewport: Style rules for nav area */
+  nav li {
+    font-size: 1.5em;
+  }
+  nav li a {
+    padding: 0.5em 1.5em;
+  }
+  nav li a:hover {
+    color: #2a1f14;
+    background-color: #f6eee4;
+  }
+
+  /* Desktop Viewport: Style rules for main content */
+  #info ul {
+    margin-left: 5%;
+  }
+  nav li a:hover {
+    color: #2a1f14;
+    background-color: #f6eee4;
+  }
+
+}
+
+/* Media Query for large Desktop Viewports */
+@media screen and (min-width: 1921px), print {
+  body{
+    background: linear-gradient(#f6eee4, #78593a);
+  }
+  #wrapper {
+    width: 1920px;
+    margin: 0 auto;
+  }
+  main {
+    background-color: #f6eee4;
+  }
+
+  /* Media Query for Print */
+  @media print {
+    body {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}
