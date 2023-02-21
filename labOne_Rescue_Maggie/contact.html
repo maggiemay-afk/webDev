@@ -55,9 +55,50 @@
       <p>Email: <a href="mailto:contact@wildrescues.net" class="link">contact@wildrescues.net</a></p>
       <p>Address: <a class="link">5132 Voges Rd, Madison, WI 53718</a></p>
     </div>
-    <div>
+
+    <div id="form">
+      <h2>Complete the form below and we will contact you soon</h2>
+      <form class="form-grid">
+        <fieldset>
+          <legend>Contact Information</legend>
+          <label for="fName"> First Name: </label>
+          <input type="text" name="fName" id="fName">
+          <label for="lName"> Last Name: </label>
+          <input type="text" name="lName" id="lName">
+          <label for="bName"> Name of Business: </label>
+          <input type="text" name="bName" id="bName">
+          <label for="email"> Email: </label>
+          <input type="email" name="email" id="email">
+          <label for="phone"> Phone: </label>
+          <input type="tel" name="phone" id="phone">
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Information</legend>
+          <p>I would like more information about:</p>
+
+          <label for="vol">
+              <input type="radio" name="info" id="vol" value="Volunteering">Volunteering
+          </label>
+          <label for="sponsor">
+              <input type="radio" name="info" id="sponsor" value="Sponsorship Opportunities">Sponsorship Opportunities
+          </label>
+          <label for="wild">
+              <input type="radio" name="info" id="wild" value="Wildlife">Wildlife
+          </label>
+          <label for="Other">
+              <input type="radio" name="info" id="Other" value="Other">Other, please specify below:
+          </label>
+          <label for="questions">What questions do you have for us?
+              <textarea name="questions" id="questions" rows="5" cols="35"></textarea>
+          </label>
+        </fieldset>
+        <input type="submit" id="submit" value="Submit" class="btn">
+      </form>
+    </div>
+    <div id="map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5831.84483811454!2d-89.30042709455888!3d43.04306379148475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880651b0e9d4b881%3A0x7f1a89132bf71628!2sDane%20County%20Humane%20Society!5e0!3m2!1sen!2sus!4v1675735139613!5m2!1sen!2sus" 
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        width="500" height="350" style="border: 2px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
   </main>
