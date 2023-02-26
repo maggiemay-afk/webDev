@@ -22,8 +22,22 @@
   <body>
     <div id="wrapper">
 
-    <header>
+      <!-- Mobile Nav -->
+      <nav class="mobile-nav">
+        <div id="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a> 
+          <a href="partnership.html">Partnership</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <a class="nav-icon" onclick="menu()">
+          <div id="icon"> &#9776; </div>
+        </a>
+      </nav>
 
+    <header>
       <div class="tab-desk">
         <a href="index.html"><img src="images/baby-hawk.jpg" alt="rescued baby hawk"></a>
       </div>
@@ -31,10 +45,9 @@
         <h1>&#128062; Wild Rescues</h1>
         <h3>Rescue. Rehabilitate. Release.</h3>
       </div>
-
     </header>
 
-    <nav>
+    <nav class="tab-desk">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a> </li>
@@ -96,6 +109,7 @@
         <input type="submit" id="submit" value="Submit" class="btn">
       </form>
     </div>
+    
     <div id="map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5831.84483811454!2d-89.30042709455888!3d43.04306379148475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880651b0e9d4b881%3A0x7f1a89132bf71628!2sDane%20County%20Humane%20Society!5e0!3m2!1sen!2sus!4v1675735139613!5m2!1sen!2sus" 
         width="500" height="350" style="border: 2px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -110,6 +124,6 @@
 
     </div>
 
+    <script src="scripts/scripts.js"></script>
   </body>
-  
 </html>

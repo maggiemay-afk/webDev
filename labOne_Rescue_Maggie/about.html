@@ -22,8 +22,22 @@
   <body>
     <div id="wrapper">
 
-    <header>
+      <!-- Mobile Nav -->
+      <nav class="mobile-nav">
+        <div id="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a> 
+          <a href="partnership.html">Partnership</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <a class="nav-icon" onclick="menu()">
+          <div id="icon"> &#9776; </div>
+        </a>
+      </nav>
 
+    <header>
       <div class="tab-desk">
         <a href="index.html"><img src="images/baby-hawk.jpg" alt="rescued baby hawk"></a>
       </div>
@@ -31,10 +45,9 @@
         <h1>&#128062; Wild Rescues</h1>
         <h3>Rescue. Rehabilitate. Release.</h3>
       </div>
-
     </header>
 
-    <nav>
+    <nav class="tab-desk">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a> </li>
@@ -48,7 +61,8 @@
   <!-- Main content of the webpage -->
   <main>
 
-    <div id="who we are"> 
+    <div id="who we are">
+      <h2>About Us</h2> 
       <p> Wild Rescues is a non-profit wild animal and livestock sanctuary located in south-central Wisconsin,
         just outside the city of Madison. We were founded in August of 1998 
         by two sisters who grew up in Wisconsin and share a love for wildlife and the outdoors. Since our founding,  
@@ -62,9 +76,16 @@
         of wildlife. Wild Rescues is a member of the <a href="https://www.nwrawildlife.org/" 
         target="blank" class="link">National Wildlife Rehabilitation Association</a>
       </p>
-      <img src="images/tortoise.jpg" alt="tortoise eating vegetation" class="round">
-      <h3>We help many animals, such as:</h3>
+      <p>Watch the video below to meet our new, rescued friends.</p>
+      <video controls poster="images/baby-hawk.jpg">
+        <source src="media/wildrescues.mp4" type="video/mp4">
+        <source src="media/wildrescues.webm" type="video/webm">
+        <track src="media/captions.vtt" kind="captions" srclang="en" label="captions">
+        <track src="media/descriptions.vtt" kind="descriptions" srclang="en" label="English descriptions">
+        <p>Your browser does not support the video element.</p>
+      </video>
 
+      <h3>We help many animals, such as:</h3>
       <ul>
         <li>Horse</li>
         <li>Goats</li>
@@ -92,6 +113,6 @@
 
     </div>
 
+    <script src="scripts/scripts.js"></script>    
   </body>
-
 </html>
