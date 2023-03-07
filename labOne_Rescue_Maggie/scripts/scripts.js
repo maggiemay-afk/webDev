@@ -1,7 +1,7 @@
 /*
 Name: Maggie Herms
 File: scripts.js
-Date: 2/26/2023
+Date: 3/6/2023
 */
 
 //Global variables 

@@ -1,6 +1,6 @@
 /*
 Name: Maggie Herms
-Date: 2-6-2023
+Last updated: 3-6-2023
 File Name: styles.css
 */
 
@@ -20,6 +20,23 @@ body {
 img, video {
   max-width: 100%;
   display: block;
+}
+
+/* Style rules for skip navigation link */
+.skip{
+  position: absolute;
+  left: -999px;
+}
+
+.skip:focus{
+  color:#fff;
+  background-color: #2a1f14;
+  text-decoration: none;
+  padding: 0.5%;
+  top: auto;
+  left: auto;
+  right: 1px;
+  z-index: 1;
 }
 
 /* Style rules for mobile viewport */
@@ -172,12 +189,18 @@ form #submit {
 /* Style rules for footer content */
 footer {
   text-align: center;
-  font-size: 0.65em;
-  clear: left;
+  font-size: 0.85em;
+  background-color: #2a1f14;
+  color: #f6eee4;
+  padding: 1% 0;
 }
 footer a {
-  color: #4645a8;
+  color: #f6eee4;
   text-decoration: none;
+}
+.social img{
+  display: inline-block;
+  padding: 4%;
 }
 
 /* Media Query for Tablet Viewport*/
@@ -193,8 +216,8 @@ footer a {
 
   /* Tablet viewport style rules for nav area */
   nav ul {
-  list-style-type: none;
-  text-align: center;
+    list-style-type: none;
+    text-align: center;
   }
   nav li {
     display: inline-block;
@@ -220,6 +243,19 @@ footer a {
   form {
     width: 70%;
     margin: 0 auto;
+  }
+
+  /* Tablet viewport style rules for footer area */
+  footer {
+    overflow: auto;
+  }
+  .copyright{
+    float: left;
+    width: 65%;
+  }
+  .social{
+    float: right;
+    width: 25%;
   }
 
 }
